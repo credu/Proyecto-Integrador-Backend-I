@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Odontologo | Dr. JISmile</title>
+        <link rel="stylesheet" href="/src/assets/css/styles.min.css" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+            rel="stylesheet"
+        />
+        <link
+            rel="shortcut icon"
+            href="/src/img/logo.svg"
+            type="image/x-icon"
+        />
+    </head>
+    <body class="bg-[#DBEFFA]">
+        <nav
+            class="container mx-auto flex flex-row text-[30px] items-center justify-between flex-wrap"
+        >
+            <div class="flex items-center gap-9">
+                <img
+                    class="h-[113px]"
+                    src="/src/assets/img/logo.svg"
+                    alt="logo"
+                />
+                <a href="/" class="text-[38px] text-nowrap font-medium"
+                    >Dr. JISmile</a
+                >
+            </div>
+
+            <ul class="[&>*]:px-[20px]">
+                <li class="inline-block hover:text-[#F33709] transition-colors">
+                    <a
+                        onclick="((event) => {
+                            if (!confirm('¿Esta seguro de cerrar sesión?'))
+                                event.preventDefault();
+                        })(event)"
+                        href="/logout"
+                        >Cerrar sesion</a
+                    >
+                </li>
+            </ul>
+        </nav>
+
+        <main class="container mx-auto my-[90px]">
+            <h1
+                class="text-[36px] leading-none font-medium pt-[7.25px] mb-[35px] min-h-[50px]"
+            >
+                Agendar turno
+            </h1>
+
+            <section
+                class="w-full max-w-[573px] bg-[#EBEFF3] px-[68px] py-[47px] mx-auto"
+            >
+                <form id="turnoForm">
+                    <div class="mb-[30px]">
+                        <label
+                            class="text-[#76737E] text-[16px] block mb-[7px]"
+                            for="odontologoId"
+                            >Odontólogos</label
+                        >
+                        <select
+                            name="odontologoId"
+                            id="odontologoId"
+                            class="px-[25px] py-[18px] text-[#BEBEBE] w-full rounded-[10px] border-[1.2px] border-[#E2E8F0] appearance-none bg-no-repeat bg-[length:14px_14px] bg-[position:calc(100%-25px)] bg-[url(https://www.svgrepo.com/show/80156/down-arrow.svg)]"
+                            required
+                        >
+                            <option value="">Seleccione un odontólogo</option>
+                        </select>
+                    </div>
+
+                    <div class="mb-[30px]">
+                        <label
+                            class="text-[#76737E] text-[16px] block mb-[7px]"
+                            for="pacienteId"
+                            >Pacientes</label
+                        >
+                        <select
+                            name="pacienteId"
+                            id="pacienteId"
+                            class="px-[25px] py-[18px] text-[#BEBEBE] w-full rounded-[10px] border-[1.2px] border-[#E2E8F0] appearance-none bg-no-repeat bg-[length:14px_14px] bg-[position:calc(100%-25px)] bg-[url(https://www.svgrepo.com/show/80156/down-arrow.svg)]"
+                            required
+                        >
+                            <option value="">Seleccione un paciente</option>
+                        </select>
+                    </div>
+
+                    <div class="mb-[30px]">
+                        <label
+                            class="text-[#76737E] text-[16px] block mb-[7px]"
+                            for="fecha"
+                            >Fecha
+                        </label>
+                        <input
+                            type="date"
+                            name="fecha"
+                            id="fecha"
+                            class="px-[25px] py-[18px] text-[#BEBEBE] w-full rounded-[10px] border-[1.2px] border-[#E2E8F0]"
+                            required
+                        />
+                    </div>
+
+                    <button
+                        type="submit"
+                        id="submitButton"
+                        class="block w-full text-white border-[#2B9F8C] bg-[#2B9F8C] transition-colors border hover:bg-transparent hover:text-[#2B9F8C] focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-[25px] py-[18px] text-center"
+                    >
+                        Agregar odontologo
+                    </button>
+                </form>
+            </section>
+            <script type="module" src="/src/agendarTurno.js"></script>
+        </main>
+    </body>
+</html>

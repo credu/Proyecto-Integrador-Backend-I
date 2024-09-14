@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+        />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <link rel="stylesheet" href="/src/assets/css/styles.min.css" />
+        <title>Iniciar sesion</title>
+    </head>
+    <body
+        class="bg-no-repeat bg-[linear-gradient(180deg,_#9AE6F1_0.32%,_rgba(219,_239,_250,_0.90)_99.95%);] h-screen flex *:flex-[1_1_100%]"
+    >
+        <section class="hidden sm:block">
+            <div class="relative h-full flex items-center justify-center">
+                <div class="flex items-center justify-between gap-5">
+                    <img
+                        class="h-[225px]"
+                        src="/src/assets/img/logo.svg"
+                        alt=""
+                    />
+
+                    <h1 class="text-[75px] font-medium text-center">
+                        Dr. JISmile
+                    </h1>
+
+                    <img
+                        class="absolute bottom-[15px]"
+                        src="/src/assets/img/Plant2.svg"
+                        alt=""
+                    />
+                </div>
+            </div>
+        </section>
+
+        <section
+            class="bg-[#DBEFFA] sm:rounded-[130px_0px_0px_0px] flex items-center justify-center"
+        >
+            <form
+                class="px-[40px] max-w-[550px] w-full"
+                method="post"
+                action="/login.html"
+            >
+                <h2 class="text-[37px] font-medium mb-[30px]">
+                    Inicio de sesión
+                </h2>
+
+                <div class="mb-[30px]">
+                    <label for="username" class="block text-[#76737E] mb-[8px]"
+                        >Correo electrónico</label
+                    >
+                    <input
+                        class="block w-full px-[24px] py-[18px] border border-[#E2E8F0] rounded-[10px] shadow-[0px_4px_4px_0px_rgba(192,_129,_130,_0.25)]"
+                        type="text"
+                        id="username"
+                        name="username"
+                        placeholder="Ingrese su correo electrónico"
+                        autofocus
+                        required
+                    />
+                </div>
+
+                <div class="mb-[30px]">
+                    <label for="password" class="block text-[#76737E] mb-[8px]"
+                        >Contraseña</label
+                    >
+                    <input
+                        class="block w-full px-[24px] py-[18px] border border-[#E2E8F0] rounded-[10px] shadow-[0px_4px_4px_0px_rgba(192,_129,_130,_0.25)]"
+                        type="password"
+                        id="password"
+                        name="password"
+                        placeholder="Password"
+                        required
+                    />
+                </div>
+
+                <button
+                    type="submit"
+                    class="block w-full text-white border-[#2B9F8C] bg-[#2B9F8C] transition-colors border hover:bg-transparent hover:text-[#2B9F8C] focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-[20px] py-[15px] text-center"
+                >
+                    Ingresar
+                </button>
+            </form>
+        </section>
+    </body>
+</html>

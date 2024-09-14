@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Turno | Dr. JISmile</title>
+        <link rel="stylesheet" href="/src/assets/css/styles.min.css" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+            rel="stylesheet"
+        />
+        <link
+            rel="shortcut icon"
+            href="/src/img/logo.svg"
+            type="image/x-icon"
+        />
+    </head>
+    <body class="bg-[#DBEFFA]">
+        <nav
+            class="container mx-auto flex flex-row text-[30px] items-center justify-between flex-wrap"
+        >
+            <div class="flex items-center gap-9">
+                <img
+                    class="h-[113px]"
+                    src="/src/assets/img/logo.svg"
+                    alt="logo"
+                />
+
+                <a href="/" class="text-[38px] text-nowrap font-medium"
+                    >Dr. JISmile</a
+                >
+
+                <a
+                    onclick="((event) => {
+                    if (!confirm('¿Esta seguro de cerrar sesión?'))
+                        event.preventDefault();
+                    })(event)"
+                    href="/logout"
+                    class="absolute bottom-[15px]"
+                >
+                    <button
+                        type="button"
+                        class="bg-[#AAE7E6] rounded-[15px] p-[8px] size-[50px]"
+                    >
+                        <svg
+                            class="block size-full fill-[#04C9D8] hover:fill-[#F33709] transition-colors"
+                            width="29"
+                            height="28"
+                            viewBox="0 0 29 28"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                        >
+                            <path
+                                d="M23.3333 0.666687H26.6666C27.5833 0.666687 28.3333 1.41669 28.3333 2.33335V25.6667C28.3333 26.5834 27.5833 27.3334 26.6666 27.3334H23.3333C22.4166 27.3334 21.6666 26.5834 21.6666 25.6667C21.6666 24.75 22.4166 24 23.3333 24H25V4.00002H23.3333C22.4166 4.00002 21.6666 3.25002 21.6666 2.33335C21.6666 1.41669 22.4166 0.666687 23.3333 0.666687ZM12.333 6.00069C13.073 5.44902 14.1146 5.59902 14.6663 6.33402L19.6663 13.0007C20.0996 13.5774 20.113 14.3674 19.6963 14.959L15.0063 21.6257C14.6813 22.0874 14.1663 22.334 13.6413 22.334C13.3113 22.334 12.9763 22.2357 12.6846 22.0307C11.9313 21.5007 11.7496 20.4607 12.2796 19.7074L15.143 15.6374C15.1205 15.6396 15.0994 15.6459 15.0785 15.6521C15.0527 15.6598 15.0272 15.6674 14.9996 15.6674H1.6663C0.746301 15.6674 -0.000366211 14.9207 -0.000366211 14.0007C-0.000366211 13.079 0.746301 12.334 1.6663 12.334H14.9996H15.0013L11.9996 8.33235C11.448 7.59735 11.5963 6.55235 12.333 6.00069Z"
+                            />
+                        </svg>
+                    </button>
+                </a>
+            </div>
+
+            <ul class="[&>*]:px-[20px]">
+                <li class="inline-block hover:text-[#04C9D8] transition-colors">
+                    <a href="/get_pacientes.html">Pacientes</a>
+                </li>
+                <li class="inline-block hover:text-[#04C9D8] transition-colors">
+                    <a href="/get_odontologos.html">Odontologos</a>
+                </li>
+                <li class="inline-block text-[#04C9D8] font-semibold">
+                    <a href="/get_turnos.html">Turnos</a>
+                </li>
+            </ul>
+        </nav>
+
+        <main class="container mx-auto my-[90px]">
+            <h1
+                class="text-[36px] leading-none font-medium pt-[7.25px] mb-[35px] min-h-[50px]"
+            >
+                Lista de Turnos
+            </h1>
+
+            <table class="overflow-hidden w-full text-center text-[37px]">
+                <thead class="bg-[#04C9D8] text-white">
+                    <tr class="px-5">
+                        <td class="rounded-[10px_0px_0px_0px]">ID</td>
+                        <td>Paciente</td>
+                        <td>Odontologo</td>
+                        <td>Fecha</td>
+                        <td class="rounded-[0px_10px_0px_0px]">Acciones</td>
+                    </tr>
+                </thead>
+                <tbody
+                    id="tableBody"
+                    class="odd:*:bg-[#EBEFF3] even:*:bg-[#F8F8F8]"
+                >
+                    <!-- Here affects javascript -->
+                </tbody>
+            </table>
+            <script type="module" src="/src/turno.js"></script>
+        </main>
+    </body>
+</html>
